@@ -1,0 +1,219 @@
+/* 
+////////////////////////// BACKGROUND OF THE PAGE //////////////////////////
+Here is where we set the color of the background of the page. It's set 
+so that the height and width fit the entire screen.
+*/
+#learning-background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #021114;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+/* 
+////// LEARNING STYLING //////
+Here are going to be the design styling of the learning box where the players
+will be able to read information about the constellations and see images of them.
+*/
+.learning-container {
+  background-color: #021114;
+  box-shadow: 10px 10px 30px 2px #c776f0;
+  margin-left: 3vw;
+  margin-top: 5vh;
+  height: 90vh;
+  width: 57vw;  
+  position: relative;
+}
+
+.title-container {
+  color: #ffffff;
+  font-family: "Orbitron", sans-serif;
+  font-style: italic;
+  margin-top: 1vh;
+  font-size: 5vh;
+  text-align: center;
+  position: relative;
+}
+
+.image-container {
+  /* The following 3 settings will always center the image */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 0px 15px 2px #ffffff;
+
+  margin-top: 3vh;
+  height: 37vh;
+  width: auto;
+}
+
+.description-container {
+  background-color: #021114;
+  /* box-shadow: 0px 0px 10px 2px #c776f0; */
+
+  margin-top: 2vh;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+
+  height: 34vh;
+  width: 50vw;
+  padding: 2vh;
+}
+
+.description-text {
+  font-size: 2.5vh;
+  color: rgb(255, 255, 255);
+  font-family: "Ubuntu", sans-serif;
+
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  height: 30vh;
+}
+
+.select-button-back {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+
+  left: 3vw;
+
+  color: white;
+  position: absolute;
+  width: 7vw;
+  height: 5vh;
+  border-radius: 0.5vw;
+
+  font-size: 3vh;
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+  transition: background-color 0.5s, border 0.1s;
+}
+
+.select-button-back:hover {
+  background-color: rgb(147, 138, 228);
+}
+
+.select-button-next {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+
+  right: 3vw;
+
+  color: white;
+  position: absolute;
+  width: 7vw;
+  height: 5vh;
+  border-radius: 0.5vw;
+
+  font-size: 3vh;
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+  transition: background-color 0.5s, border 0.1s;
+}
+
+.select-button-next:hover {
+  background-color: rgb(147, 138, 228);
+}
+
+/* 
+////// MYTH IMAGE STYLING //////
+Here we have the box that will contain the myth images.
+*/
+#myth-image-container {
+  margin-left: 2vw;
+  margin-top: 5vh;
+  width: 37vw;
+  height: 90vh;
+
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+.image-myth-container {
+  box-shadow: 0px 0px 20px 2px #76cdf0;
+  max-width: 522.237px;
+  max-height: 463.675px;
+  margin: 0px;
+}
+
+/* 
+////// SIDEBAR STYLING //////
+Here are going to be the design styling for the sidebar at the side of the page,
+in which players will be able to decide whether to log out or to go back to the homepage.
+*/
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #021114; 
+  overflow-x: hidden; 
+  padding-top: 60px; 
+  transition: 0.5s; 
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+#remove-underline {
+  text-decoration: none;
+}
+
+.profile-content {
+  color: #ffffff;
+  font-family: "Orbitron", sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+
+/* The sidebar links */
+.sidebar-buttons {
+  transition: 0.3s;
+  background: none;
+  border: none;
+  margin: 0;
+  padding-left: 20px;
+  bottom: 0px;
+  cursor: pointer;
+  /*///////////////////////*/
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 30px;
+  font-style: italic;
+  color: #00f8f8;
+  letter-spacing: 0.1em;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar-buttons:hover {
+  color: #ffffff;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  top: 4px;
+  right: 2px;
+  position: absolute;
+}

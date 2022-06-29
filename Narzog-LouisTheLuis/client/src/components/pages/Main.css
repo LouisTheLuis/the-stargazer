@@ -1,0 +1,275 @@
+/* 
+////////////////////////// BACKGROUND OF THE PAGE //////////////////////////
+Here is where we set the color of the background of the page. It's set 
+so that the height and width fit the entire screen.
+*/
+#main-background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /* background-color: #021114; */
+  background: linear-gradient(#021114, #00f8f8);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row-reverse;
+  overflow: hidden;
+}
+
+.stars {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.5px;
+  height: 0.5px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow:0 0 0 1px rgba(255, 255, 255, 0.1), 
+  0 0 0 2px rgba(255, 255, 255, 0.1), 
+  0 0 0 5px rgb(255, 255, 255);
+  animation: animate 3s linear infinite;
+}
+
+.stars::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
+  height: 1px;
+  background: linear-gradient(90deg, #ffffff, transparent);
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(315deg) translateX(0);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(315deg) translateX(-1000px);
+    opacity: 0;
+  }
+}
+
+.stars:nth-child(1) {
+  top: 0;
+  right: 0;
+  left: initial;
+  animation-delay: 0;
+  animation-duration: 1s;
+}
+
+.stars:nth-child(2) {
+  top: 0;
+  right: 80px;
+  left: initial;
+  animation-delay: 0.2s;
+  animation-duration: 3s;
+}
+
+.stars:nth-child(3) {
+  top: 80px;
+  right: 0px;
+  left: initial;
+  animation-delay: 0.4s;
+  animation-duration: 2s;
+}
+
+.stars:nth-child(4) {
+  top: 0;
+  right: 180px;
+  left: initial;
+  animation-delay: 0.6s;
+  animation-duration: 1.5s;
+}
+
+.stars:nth-child(5) {
+  top: 0;
+  right: 1000px;
+  left: initial;
+  animation-delay: 0.8s;
+  animation-duration: 2.5s;
+}
+
+.stars:nth-child(6) {
+  top: 0;
+  right: 800px;
+  left: initial;
+  animation-delay: 1s;
+  animation-duration: 3s;
+}
+
+/* 
+////////////////////////// SELECTION OF THE PAGE //////////////////////////
+Here is where we set the styling of the selection section of the page, where
+the user will be able to click onto other pages of the website.
+*/
+#selection-box-wrap {
+  filter: drop-shadow(0px 0px 20px rgba(213, 0, 251, 1));
+  width: 100%;
+  height: 100%;
+}
+
+#selection-box {
+  background-color: #021114;
+  width: 100%;
+  height: 100%;
+  right: 0px;
+  clip-path: polygon(60% 0%, 100% 0%, 100% 100%, 50% 100%);
+  /* THE DISPLAY BELOW ALLOWS THAT THE CONTENT OF THE SELECTION BOX APPEARS AT THE RIGHT OF THE SCREEN */
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+#selection-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10%;
+}
+
+.remove-underline {
+  text-decoration: none;
+}
+
+.selection-button {
+  color: #00f8f8;
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  font-size: 6vh;
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  letter-spacing: 0.2em;
+  transition: background-color 0.5s, border 0.1s;
+}
+
+.selection-button:hover {
+  color: rgb(106, 85, 226);
+}
+
+/*The following describe the positioning of each button*/
+.position-1 {
+  margin-left: 22%;
+}
+
+.position-2 {
+  margin-left: 19%;
+}
+
+.position-3 {
+  margin-left: 16%;
+}
+
+.position-4 {
+  margin-left: 13%;
+}
+
+/* 
+////////////////////////// PROFILE OF THE PAGE //////////////////////////
+Here is where we set the styling of the profile section of the page, where
+the user will be able to see their name with a message and a profile pic (if possible).
+*/
+#profile-box {
+  background-color: rgba(213, 0, 251, 0);
+  left: 0px;
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  color: #ffffff;
+  text-align: center;
+}
+
+#profile-content {
+  margin-top: 50%;
+  margin-left: 20%;
+  font-family: "Orbitron", sans-serif;
+  font-size: 5vh;
+
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 2vh;
+}
+
+#profile-pic {
+  /* margin-top: 15vh; */
+  border-radius: 50%;
+  text-align: center;
+  height: 15vh;
+  width: 15vh;
+}
+
+/* 
+////// SIDEBAR STYLING //////
+Here are going to be the design styling for the sidebar at the side of the page,
+in which players will be able to decide whether to log out or to go back to the homepage.
+*/
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #021114; 
+  overflow-x: hidden; 
+  padding-top: 60px; 
+  transition: 0.5s; 
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+#remove-underline {
+  text-decoration: none;
+}
+
+.profile-content {
+  color: #ffffff;
+  font-family: "Orbitron", sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+
+/* The sidebar links */
+.sidebar-buttons {
+  transition: 0.3s;
+  background: none;
+  border: none;
+  margin: 0;
+  padding-left: 20px;
+  bottom: 0px;
+  cursor: pointer;
+  /*///////////////////////*/
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 30px;
+  font-style: italic;
+  color: #00f8f8;
+  letter-spacing: 0.1em;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar-buttons:hover {
+  color: #ffffff;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  top: 4px;
+  right: 2px;
+  position: absolute;
+}

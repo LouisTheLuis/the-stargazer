@@ -1,0 +1,176 @@
+/* 
+////////////////////////// BACKGROUND OF THE PAGE //////////////////////////
+Here is where we set the color of the background of the page. It's set 
+so that the height and width fit the entire screen.
+*/
+#leaderboard-background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #021114;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+#leaderboard-title {
+  color: #ffffff;
+  text-align: center;
+  width: 100%;
+  font-family: "Orbitron", sans-serif;
+  font-style: italic;
+  font-size: 7vh;
+  letter-spacing: 0.1em;
+  margin-top: 3vh;
+}
+
+.column1 {
+  height: 102vh;
+  width: auto;
+  margin-top: -1vh;
+  margin-left: 4.3vw;
+  object-fit: contain;
+  position: absolute;
+}
+
+.column2 {
+  height: 104vh;
+  width: auto;
+  margin-top: 0vh;
+  right: 3.5vw;
+  object-fit: contain;
+  position: absolute;
+}
+
+/* 
+////////////////////////// LEADERBOARD STYLING //////////////////////////
+Here is where we set the design of the leaderboard of the page.
+*/
+#leaderboard-container {
+  background-color: #021114;
+  box-shadow: -10px 0px 30px 2px #76cdf0, 10px 0px 30px 2px #c776f0;
+  width: 55vw;
+  height: 70vh;
+
+  margin-top: 7vh;
+  margin-left: 22.5vw;
+  color: #ffffff;
+
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+}
+
+#names-container {
+  /* background-color: #1fafcc; */
+  width: 25vw;
+  margin-left: 1vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4vh;
+}
+
+#names-title {
+  font-family: "Orbitron", sans-serif;
+  margin-top: -1vh;
+  font-size: 7vh;
+  color: #76cdf0;
+}
+
+.names {
+  font-size: 5vh;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+#scores-container {
+  /* background-color: #ae40ee; */
+  width: 25vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4vh;
+}
+
+#scores-title {
+  font-family: "Orbitron", sans-serif;
+  margin-top: -1vh;
+  font-size: 7vh;
+  color: #c776f0;
+}
+
+.scores {
+  font-size: 5vh;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* 
+////// SIDEBAR STYLING //////
+Here are going to be the design styling for the sidebar at the side of the page,
+in which players will be able to decide whether to log out or to go back to the homepage.
+*/
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #021114;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+#remove-underline {
+  text-decoration: none;
+}
+
+.profile-content {
+  color: #ffffff;
+  font-family: "Orbitron", sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+
+/* The sidebar links */
+.sidebar-buttons {
+  transition: 0.3s;
+  background: none;
+  border: none;
+  margin: 0;
+  padding-left: 20px;
+  bottom: 0px;
+  cursor: pointer;
+  /*///////////////////////*/
+  font-family: "Titillium Web", sans-serif;
+  font-size: 30px;
+  font-style: italic;
+  color: #00f8f8;
+  letter-spacing: 0.1em;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar-buttons:hover {
+  color: #ffffff;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  top: 4px;
+  right: 2px;
+  position: absolute;
+}
